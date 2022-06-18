@@ -1,0 +1,284 @@
+
+(rules PCB PB_16
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 20)
+    (layer_rule "F.Cu"
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.2)
+    )
+    (layer_rule "B.Cu"
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.9)
+    )
+  )
+  (rule
+    (width 350.0)
+    (clear 200.2)
+    (clear 175.0 (type smd_to_turn_gap))
+    (clear 500.2 (type "default"-"Power"))
+    (clear 300.2 (type "default"-"Vin"))
+    (clear 50.0 (type "smd"-"smd"))
+    (clear 500.2 (type "smd"-"Power"))
+    (clear 300.2 (type "smd"-"Vin"))
+    (clear 500.2 (type "kicad_default"-"Power"))
+    (clear 300.2 (type "kicad_default"-"Vin"))
+    (clear 500.2 (type "3.3v"-"Power"))
+    (clear 300.2 (type "3.3v"-"Vin"))
+    (clear 500.2 (type "5v"-"Power"))
+    (clear 300.2 (type "5v"-"Vin"))
+    (clear 500.2 (type "Gnd"-"Power"))
+    (clear 300.2 (type "Gnd"-"Vin"))
+    (clear 500.2 (type "Power"-"Power"))
+    (clear 500.2 (type "Power"-"Vin"))
+    (clear 500.2 (type "Power"-"power2"))
+    (clear 500.2 (type "Power"-"usb"))
+    (clear 500.2 (type "Power"-"v_usb"))
+    (clear 300.2 (type "Vin"-"Vin"))
+    (clear 300.2 (type "Vin"-"power2"))
+    (clear 300.2 (type "Vin"-"usb"))
+    (clear 300.2 (type "Vin"-"v_usb"))
+    (clear 100.2 (type "usb"-"usb"))
+    (clear 100.2 (type "v_usb"-"v_usb"))
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle "F.Cu" 800.0 0.0 0.0)
+    )
+    (shape
+      (circle "B.Cu" 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (padstack "Via[0-1]_1000:400_um"
+    (shape
+      (circle "F.Cu" 1000.0 0.0 0.0)
+    )
+    (shape
+      (circle "B.Cu" 1000.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" "default"
+  )
+  (via 
+    "Via[0-1]_1000:400_um" "Via[0-1]_1000:400_um" "default"
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_1000:400_um-kicad_default" "Via[0-1]_1000:400_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_800:400_um-3.3v" "Via[0-1]_800:400_um" "3.3v"
+  )
+  (via 
+    "Via[0-1]_1000:400_um-3.3v" "Via[0-1]_1000:400_um" "3.3v"
+  )
+  (via 
+    "Via[0-1]_800:400_um-5v" "Via[0-1]_800:400_um" "5v"
+  )
+  (via 
+    "Via[0-1]_1000:400_um-5v" "Via[0-1]_1000:400_um" "5v"
+  )
+  (via 
+    "Via[0-1]_800:400_um-Gnd" "Via[0-1]_800:400_um" "Gnd"
+  )
+  (via 
+    "Via[0-1]_1000:400_um-Gnd" "Via[0-1]_1000:400_um" "Gnd"
+  )
+  (via 
+    "Via[0-1]_800:400_um-Power" "Via[0-1]_800:400_um" "Power"
+  )
+  (via 
+    "Via[0-1]_1000:400_um-Power" "Via[0-1]_1000:400_um" "Power"
+  )
+  (via 
+    "Via[0-1]_800:400_um-Vin" "Via[0-1]_800:400_um" "Vin"
+  )
+  (via 
+    "Via[0-1]_1000:400_um-Vin" "Via[0-1]_1000:400_um" "Vin"
+  )
+  (via 
+    "Via[0-1]_800:400_um-power2" "Via[0-1]_800:400_um" "power2"
+  )
+  (via 
+    "Via[0-1]_1000:400_um-power2" "Via[0-1]_1000:400_um" "power2"
+  )
+  (via 
+    "Via[0-1]_800:400_um-usb" "Via[0-1]_800:400_um" "usb"
+  )
+  (via 
+    "Via[0-1]_1000:400_um-usb" "Via[0-1]_1000:400_um" "usb"
+  )
+  (via 
+    "Via[0-1]_800:400_um-v_usb" "Via[0-1]_800:400_um" "v_usb"
+  )
+  (via 
+    "Via[0-1]_1000:400_um-v_usb" "Via[0-1]_1000:400_um" "v_usb"
+  )
+  (via_rule
+    "default" "Via[0-1]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (via_rule
+    "3.3v" "Via[0-1]_800:400_um-3.3v"
+  )
+  (via_rule
+    "5v" "Via[0-1]_800:400_um-5v"
+  )
+  (via_rule
+    "Gnd" "Via[0-1]_1000:400_um-Gnd"
+  )
+  (via_rule
+    "Power" "Via[0-1]_800:400_um-Power"
+  )
+  (via_rule
+    "Vin" "Via[0-1]_800:400_um-Vin"
+  )
+  (via_rule
+    "power2" "Via[0-1]_800:400_um-power2"
+  )
+  (via_rule
+    "usb" "Via[0-1]_800:400_um-usb"
+  )
+  (via_rule
+    "v_usb" "Via[0-1]_800:400_um-v_usb"
+  )
+  (class "default"
+    "/Output 1-8/DOUT8" "Net-(D2-Pad2)" "DATA14" "DATA12" "DATA15" "DATA13" "DATA11" "Net-(D3-Pad1)"
+    "DATA10" "DATA9" "DATA1" "DATA2" "Net-(D4-Pad2)" "DATA3" "DATA4" "DATA5"
+    "DATA6" "DATA7" "DATA8" "DATA16" "unconnected-(J25-Pad1)" "TXD1" "TXD2" "I2C_SDA"
+    "I2C_SCL" "OUT32" "OUT24" "OUT31" "OUT23" "OUT30" "OUT22" "OUT21"
+    "OUT20" "OUT27" "OUT19" "OUT26" "OUT18" "OUT25" "OUT17" "OUT29"
+    "OUT28" "GPIO2" "GPIO1" "USB_DVBUS" "BTN1" "BTN2" "Net-(R15-Pad1)" "Net-(R16-Pad1)"
+    "Net-(R17-Pad1)" "Net-(C1-Pad1)" "OUT36" "OUT35" "OUT34" "OUT33" "unconnected-(U9-Pad6)" "unconnected-(U9-Pad1)"
+    "Net-(R18-Pad1)" "Net-(R19-Pad1)" "Net-(R20-Pad1)" "Net-(R21-Pad1)" "Net-(R22-Pad1)" "Net-(R30-Pad2)" "unconnected-(U3-PadP1_18)" "unconnected-(U3-PadP1_19)"
+    "unconnected-(U3-PadP1_21)" "unconnected-(U3-PadP1_23)" "unconnected-(U3-PadP1_24)" "unconnected-(U3-PadP1_25)" "unconnected-(U3-PadP1_27)" "unconnected-(U3-PadP2_12)" "unconnected-(U3-PadP2_13)" "unconnected-(U3-PadP2_14)"
+    "unconnected-(U3-PadP2_16)" "unconnected-(U3-PadP2_23)" "unconnected-(U3-PadP2_26)" "unconnected-(U3-PadP2_36)" "unconnected-(U1-Pad7)" "Net-(D1-Pad2)" "/Output 1-8/DOUT1" "/Output 1-8/DOUT2"
+    "/Output 1-8/DOUT3" "/Output 1-8/DOUT4" "/Output 1-8/DOUT5" "/Output 1-8/DOUT6" "/Output 1-8/DOUT7"
+    (clearance_class "default")
+    (via_rule "default")
+    (rule
+      (width 350.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    (clearance_class "kicad_default")
+    (via_rule "kicad_default")
+    (rule
+      (width 350.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "3.3v"
+    "+3V3" "/OLED_Pin_4" "/OLED_Pin_3"
+    (clearance_class "3.3v")
+    (via_rule "3.3v")
+    (rule
+      (width 500.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "5v"
+    "+5V"
+    (clearance_class "5v")
+    (via_rule "5v")
+    (rule
+      (width 1500.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "Gnd"
+    "GND"
+    (clearance_class "Gnd")
+    (via_rule "Gnd")
+    (rule
+      (width 3000.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "Power"
+    "/Output 1-8/VOUT1" "/Output 1-8/VOUT2" "/Output 1-8/VOUT3" "/Output 1-8/VOUT4" "/Output 1-8/VOUT5" "/Output 1-8/VOUT6" "/Output 1-8/VOUT7" "/Output 1-8/VOUT8"
+    (clearance_class "Power")
+    (via_rule "Power")
+    (rule
+      (width 3000.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "Vin"
+    "VIN2" "/VIN" "/VIN_Fuse" "VCC" "VIN1"
+    (clearance_class "Vin")
+    (via_rule "Vin")
+    (rule
+      (width 2000.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "power2"
+    "/USB/V_USB_FB"
+    (clearance_class "power2")
+    (via_rule "power2")
+    (rule
+      (width 1000.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "usb"
+    "USB_D+" "USB_D-"
+    (clearance_class "usb")
+    (via_rule "usb")
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "v_usb"
+    "V_USB"
+    (clearance_class "v_usb")
+    (via_rule "v_usb")
+    (rule
+      (width 500.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
