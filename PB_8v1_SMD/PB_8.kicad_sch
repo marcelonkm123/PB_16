@@ -3216,16 +3216,35 @@
     )
   )
 
+  (sheet (at 87.3252 177.292) (size 21.59 15.24) (fields_autoplaced)
+    (stroke (width 0) (type solid) (color 0 0 0 0))
+    (fill (color 0 0 0 0.0000))
+    (uuid ee281e36-0822-48a2-9e3f-ba9140af478c)
+    (property "Sheet name" "Diff" (id 0) (at 87.3252 176.5804 0)
+      (effects (font (size 1.27 1.27)) (justify left bottom))
+    )
+    (property "Sheet file" "Diff.kicad_sch" (id 1) (at 87.3252 193.1166 0)
+      (effects (font (size 1.27 1.27)) (justify left top))
+    )
+  )
+
   (sheet_instances
     (path "/" (page "1"))
     (path "/00000000-0000-0000-0000-00005d413c25" (page "2"))
+    (path "/ee281e36-0822-48a2-9e3f-ba9140af478c" (page "3"))
     (path "/00000000-0000-0000-0000-00005d4698de" (page "4"))
     (path "/00000000-0000-0000-0000-00005d648680" (page "6"))
   )
 
   (symbol_instances
+    (path "/ee281e36-0822-48a2-9e3f-ba9140af478c/97fca2e9-9c9d-485a-af6f-c9d488a151a9"
+      (reference "#PWR01") (unit 1) (value "+5V") (footprint "")
+    )
     (path "/00000000-0000-0000-0000-00005d5b866e"
       (reference "#PWR02") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/ee281e36-0822-48a2-9e3f-ba9140af478c/39d41e00-f438-4796-a9cd-e6f3168c73de"
+      (reference "#PWR03") (unit 1) (value "GND") (footprint "")
     )
     (path "/00000000-0000-0000-0000-00005d51c5e3"
       (reference "#PWR04") (unit 1) (value "GND") (footprint "")
@@ -3313,6 +3332,12 @@
     )
     (path "/00000000-0000-0000-0000-00005d8de354"
       (reference "#PWR032") (unit 1) (value "+3.3V") (footprint "")
+    )
+    (path "/ee281e36-0822-48a2-9e3f-ba9140af478c/78855180-3489-4b90-8473-a0526a6cdc7e"
+      (reference "#PWR033") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/ee281e36-0822-48a2-9e3f-ba9140af478c/8ec2d9bf-7f3e-41fd-b41a-95a7b12782d3"
+      (reference "#PWR034") (unit 1) (value "GND") (footprint "")
     )
     (path "/00000000-0000-0000-0000-00005d413c25/00000000-0000-0000-0000-00005e95876a"
       (reference "#PWR038") (unit 1) (value "GND") (footprint "")
@@ -3407,6 +3432,9 @@
     (path "/00000000-0000-0000-0000-00005d413c25/00000000-0000-0000-0000-00005e958764"
       (reference "C4") (unit 1) (value "0.1uF") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
     )
+    (path "/ee281e36-0822-48a2-9e3f-ba9140af478c/9afffebf-f2b4-422d-b595-02654a91f956"
+      (reference "C5") (unit 1) (value "0.1uF") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
+    )
     (path "/00000000-0000-0000-0000-00005d4698de/00000000-0000-0000-0000-00005d4e3ada"
       (reference "C6") (unit 1) (value "0.1uF") (footprint "Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder")
     )
@@ -3479,6 +3507,9 @@
     (path "/00000000-0000-0000-0000-00005d4698de/00000000-0000-0000-0000-00005d4e39f4"
       (reference "J8") (unit 1) (value "String8") (footprint "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_3-G-3.5_1x03_P3.50mm_Vertical")
     )
+    (path "/ee281e36-0822-48a2-9e3f-ba9140af478c/383a15f1-ee32-4530-bca5-9032d1bb1254"
+      (reference "J9") (unit 1) (value "RJ45") (footprint "Connector_RJ:RJ45_Amphenol_54602-x08_Horizontal")
+    )
     (path "/00000000-0000-0000-0000-00005ecf4c8a"
       (reference "J18") (unit 1) (value "Power In Right") (footprint "Barrier_Blocks:BARRIER_BLOCK_1ROW_2POS_P9.5MM")
     )
@@ -3509,6 +3540,9 @@
     (path "/00000000-0000-0000-0000-00005d5b676d"
       (reference "R1") (unit 1) (value "1K") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
+    (path "/ee281e36-0822-48a2-9e3f-ba9140af478c/95903096-7705-43fe-ba46-051e52f59cc0"
+      (reference "R2") (unit 1) (value "120") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
+    )
     (path "/00000000-0000-0000-0000-00005d66016d"
       (reference "R3") (unit 1) (value "120") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
@@ -3520,6 +3554,15 @@
     )
     (path "/00000000-0000-0000-0000-00005d8dbaae"
       (reference "R6") (unit 1) (value "4.7K") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
+    )
+    (path "/ee281e36-0822-48a2-9e3f-ba9140af478c/702edc17-db40-4cca-a32a-30256961ef23"
+      (reference "R7") (unit 1) (value "120") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
+    )
+    (path "/ee281e36-0822-48a2-9e3f-ba9140af478c/a8720fe1-0906-45d8-bbfe-4e8d6b04c8fd"
+      (reference "R8") (unit 1) (value "120") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
+    )
+    (path "/ee281e36-0822-48a2-9e3f-ba9140af478c/898b0d0d-cb93-4f5a-8a16-1f96efe50bf5"
+      (reference "R9") (unit 1) (value "120") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-00005d4698de/550703a5-aa76-411e-90fc-4363b6cc0176"
       (reference "R15") (unit 1) (value "33") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
@@ -3574,6 +3617,9 @@
     )
     (path "/00000000-0000-0000-0000-00005d413c25/00000000-0000-0000-0000-00005e945b5c"
       (reference "U3") (unit 2) (value "POCKETBEAGLE-SC-569") (footprint "POCKETBEAGLE:BEAGLE_POCKETBEAGLE-SC-569")
+    )
+    (path "/ee281e36-0822-48a2-9e3f-ba9140af478c/74ae4135-4e09-4370-9ec7-99e88e06c12a"
+      (reference "U4") (unit 1) (value "AM26C31") (footprint "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm")
     )
     (path "/00000000-0000-0000-0000-00005d4698de/00000000-0000-0000-0000-00005d4e3af4"
       (reference "U5") (unit 1) (value "SN74HCT245N") (footprint "SN74HCT245NSR:SN74HCT245NSR")

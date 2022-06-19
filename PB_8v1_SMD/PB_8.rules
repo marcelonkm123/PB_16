@@ -1,5 +1,5 @@
 
-(rules PCB PB_16
+(rules PCB PB_8
   (snap_angle 
     fortyfive_degree
   )
@@ -11,7 +11,7 @@
     (via_costs 50)
     (plane_via_costs 5)
     (start_ripup_costs 100)
-    (start_pass_no 20)
+    (start_pass_no 210)
     (layer_rule "F.Cu"
       (active on)
       (preferred_direction vertical)
@@ -163,17 +163,18 @@
     "v_usb" "Via[0-1]_800:400_um-v_usb"
   )
   (class "default"
-    "/Output 1-8/DOUT8" "Net-(D2-Pad2)" "DATA14" "DATA12" "DATA15" "DATA13" "DATA11" "Net-(D3-Pad1)"
-    "DATA10" "DATA9" "DATA1" "DATA2" "Net-(D4-Pad2)" "DATA3" "DATA4" "DATA5"
-    "DATA6" "DATA7" "DATA8" "DATA16" "unconnected-(J25-Pad1)" "TXD1" "TXD2" "I2C_SDA"
-    "I2C_SCL" "OUT32" "OUT24" "OUT31" "OUT23" "OUT30" "OUT22" "OUT21"
-    "OUT20" "OUT27" "OUT19" "OUT26" "OUT18" "OUT25" "OUT17" "OUT29"
-    "OUT28" "GPIO2" "GPIO1" "USB_DVBUS" "BTN1" "BTN2" "Net-(R15-Pad1)" "Net-(R16-Pad1)"
-    "Net-(R17-Pad1)" "Net-(C1-Pad1)" "OUT36" "OUT35" "OUT34" "OUT33" "unconnected-(U9-Pad6)" "unconnected-(U9-Pad1)"
-    "Net-(R18-Pad1)" "Net-(R19-Pad1)" "Net-(R20-Pad1)" "Net-(R21-Pad1)" "Net-(R22-Pad1)" "Net-(R30-Pad2)" "unconnected-(U3-PadP1_18)" "unconnected-(U3-PadP1_19)"
-    "unconnected-(U3-PadP1_21)" "unconnected-(U3-PadP1_23)" "unconnected-(U3-PadP1_24)" "unconnected-(U3-PadP1_25)" "unconnected-(U3-PadP1_27)" "unconnected-(U3-PadP2_12)" "unconnected-(U3-PadP2_13)" "unconnected-(U3-PadP2_14)"
-    "unconnected-(U3-PadP2_16)" "unconnected-(U3-PadP2_23)" "unconnected-(U3-PadP2_26)" "unconnected-(U3-PadP2_36)" "unconnected-(U1-Pad7)" "Net-(D1-Pad2)" "/Output 1-8/DOUT1" "/Output 1-8/DOUT2"
-    "/Output 1-8/DOUT3" "/Output 1-8/DOUT4" "/Output 1-8/DOUT5" "/Output 1-8/DOUT6" "/Output 1-8/DOUT7"
+    "/Output 1-8/DOUT8" "DATA14" "DATA12" "DATA15" "DATA13" "DATA11" "Net-(D3-Pad1)" "DATA10"
+    "DATA9" "DATA1" "DATA2" "Net-(D4-Pad2)" "DATA3" "DATA4" "DATA5" "DATA6"
+    "DATA7" "DATA8" "DATA16" "unconnected-(J25-Pad1)" "TXD1" "TXD2" "I2C_SDA" "I2C_SCL"
+    "OUT32" "OUT24" "OUT31" "OUT23" "OUT30" "OUT22" "OUT21" "OUT20"
+    "OUT27" "OUT19" "OUT26" "OUT18" "OUT25" "OUT17" "OUT29" "OUT28"
+    "GPIO2" "GPIO1" "USB_DVBUS" "BTN1" "BTN2" "Net-(R15-Pad1)" "Net-(R16-Pad1)" "Net-(R17-Pad1)"
+    "Net-(C1-Pad1)" "OUT36" "OUT35" "OUT34" "OUT33" "unconnected-(U9-Pad6)" "unconnected-(U9-Pad1)" "Net-(R18-Pad1)"
+    "Net-(R19-Pad1)" "Net-(R20-Pad1)" "Net-(R21-Pad1)" "Net-(R22-Pad1)" "Net-(R30-Pad2)" "unconnected-(U3-PadP1_18)" "unconnected-(U3-PadP1_19)" "unconnected-(U3-PadP1_21)"
+    "unconnected-(U3-PadP1_23)" "unconnected-(U3-PadP1_24)" "unconnected-(U3-PadP1_25)" "unconnected-(U3-PadP1_27)" "unconnected-(U3-PadP2_12)" "unconnected-(U3-PadP2_13)" "unconnected-(U3-PadP2_14)" "unconnected-(U3-PadP2_16)"
+    "unconnected-(U3-PadP2_23)" "unconnected-(U3-PadP2_26)" "unconnected-(U3-PadP2_36)" "unconnected-(U1-Pad7)" "Net-(D1-Pad2)" "/Output 1-8/DOUT1" "/Output 1-8/DOUT2" "/Output 1-8/DOUT3"
+    "/Output 1-8/DOUT4" "/Output 1-8/DOUT5" "/Output 1-8/DOUT6" "/Output 1-8/DOUT7" "OUT9+" "OUT9-" "OUT10+" "OUT11-"
+    "OUT11+" "OUT10-" "OUT12+" "OUT12-"
     (clearance_class "default")
     (via_rule "default")
     (rule
@@ -238,7 +239,7 @@
     )
   )
   (class "Vin"
-    "VIN2" "/VIN" "/VIN_Fuse" "VCC" "VIN1"
+    "VIN2" "/VIN" "/VIN_Fuse" "VCC"
     (clearance_class "Vin")
     (via_rule "Vin")
     (rule

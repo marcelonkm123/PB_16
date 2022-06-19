@@ -334,7 +334,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "PB_16.kicad_pro",
+    "filename": "PB_8.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -540,7 +540,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "specctra_dsn": "PB_16.dsn",
+      "specctra_dsn": "PB_8.dsn",
       "step": "",
       "vrml": ""
     },
@@ -592,6 +592,10 @@
     [
       "00000000-0000-0000-0000-00005d413c25",
       "PocketBeagle"
+    ],
+    [
+      "ee281e36-0822-48a2-9e3f-ba9140af478c",
+      "Diff"
     ],
     [
       "00000000-0000-0000-0000-00005d4698de",
