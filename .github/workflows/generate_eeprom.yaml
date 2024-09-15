@@ -1,0 +1,27 @@
+name: Generate EPPROMS
+on:
+  workflow_dispatch:
+    
+jobs:
+  generate-eeproms:
+    name: Generate EPPROMS
+    runs-on: ubuntu-latest
+      
+    steps:
+
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+        
+    - name: Generate Files
+      run: |
+        cd eeprom_generator
+        sudo make
+
+    - name: Upload Export Files as Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: EEPROMs
+        path: eeprom_generator/*.bin
+        if-no-files-found: error
+        retention-days: 60
+
